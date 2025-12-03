@@ -3,9 +3,9 @@
 .env.example
 
 # Python
-__pycache__/
-*.py[cod]
-*$py.class
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
 *.so
 .Python
 build/
@@ -29,6 +29,9 @@ venv/
 ENV/
 env/
 .venv/
+
+# Node modules (any folder or nested)
+**/node_modules/
 
 # IDE
 .idea/
