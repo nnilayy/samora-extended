@@ -54,3 +54,5 @@ logs/
 htmlcov/
 
 local-requirements.txt
+new_venv
+pwr_venv
