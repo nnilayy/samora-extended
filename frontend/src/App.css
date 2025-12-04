@@ -54,7 +54,7 @@
   margin-bottom: 40px;
   position: relative;
   z-index: 2;
-  transform: translateY(-20px);
+  transform: translateY(-80px);
 }
 
 .hero-title {
@@ -62,6 +62,7 @@
   font-weight: 800;
   color: #F22F46;
   margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(242, 47, 70, 0.5), 0 0 20px rgba(242, 47, 70, 0.3), 0 0 30px rgba(242, 47, 70, 0.2);
 }
 
 .hero-highlight {
@@ -72,11 +73,11 @@
 .hero-features {
   list-style: none;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 8px 24px;
   margin-top: 12px;
+  max-width: 600px;
 }
 
 .hero-features li {
@@ -84,15 +85,18 @@
   font-size: 13px;
   font-weight: 600;
   position: relative;
-  padding-left: 12px;
+  padding: 4px 12px 4px 20px;
   letter-spacing: 0.2px;
   text-shadow: 0 0 10px rgba(255, 77, 109, 0.5), 0 0 20px rgba(255, 77, 109, 0.3);
+  background: rgba(255, 77, 109, 0.08);
+  border-radius: 15px;
+  border: 1px solid #ff1a40;
 }
 
 .hero-features li::before {
   content: '';
   position: absolute;
-  left: 0;
+  left: 8px;
   top: 50%;
   transform: translateY(-50%);
   width: 5px;
@@ -100,6 +104,201 @@
   background: #ff4d6d;
   border-radius: 50%;
   box-shadow: 0 0 6px rgba(255, 77, 109, 0.8), 0 0 12px rgba(255, 77, 109, 0.5);
+}
+
+/* Agent Tagline */
+.agent-tagline {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+  transform: translateY(-60px);
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.agent-tagline p {
+  margin: 0;
+}
+
+.mongodb-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f4f4f4;
+  padding: 8px 16px;
+  border-radius: 25px;
+  border: 1px solid #e0e0e0;
+}
+
+.mongodb-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.ping-dot-container {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+}
+
+.ping-dot {
+  width: 8px;
+  height: 8px;
+  background: #00ED64;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.ping-ring {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid #00ED64;
+  animation: ping 2s ease-out infinite;
+  z-index: 1;
+}
+
+.ping-ring-2 {
+  animation-delay: 1s;
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+.mongodb-badge span {
+  font-size: 14px;
+  color: #00684A;
+  font-weight: 600;
+}
+
+.info-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  border: 1px solid #ccc;
+  color: #555;
+  font-size: 12px;
+  font-weight: 700;
+  font-style: italic;
+  font-family: Georgia, serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  margin-left: 8px;
+}
+
+.info-icon:hover {
+  background: #d0d0d0;
+  color: #333;
+}
+
+/* MongoDB Info Modal */
+.mongo-modal {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  max-width: 350px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.mongo-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.mongo-modal-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.mongo-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #00684A;
+}
+
+.mongo-status {
+  color: #00ED64;
+  font-size: 18px;
+  margin: 0 0 5px 0;
+}
+
+.mongo-db-name {
+  color: #00684A;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  padding: 8px 16px;
+  background: rgba(0, 237, 100, 0.1);
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.mongo-info-content {
+  text-align: left;
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+}
+
+.mongo-subtitle {
+  color: #00684A;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0 0 10px 0;
+}
+
+.mongo-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.mongo-list li {
+  color: #555;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.mongo-realtime {
+  color: #00684A;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+  padding: 10px;
+  background: rgba(0, 237, 100, 0.15);
+  border-radius: 8px;
 }
 
 /* Options Container - Side by Side Layout */
@@ -110,7 +309,8 @@
   gap: 40px;
   position: relative;
   z-index: 2;
-  margin-top: 60px;
+  margin-top: 0px;
+  transform: translateY(-20px);
 }
 
 .option-section {
@@ -394,12 +594,13 @@
   .App {
     padding: 15px;
     justify-content: flex-start;
-    padding-top: 40px;
+    padding-top: 20px;
   }
   
   .hero-header {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     transform: translateY(0);
+    margin-top: 0;
   }
   
   .hero-title {
@@ -408,8 +609,9 @@
   }
   
   .hero-features {
-    flex-wrap: wrap;
-    gap: 8px 15px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
     margin-top: 10px;
     padding: 0 10px;
   }
@@ -418,11 +620,30 @@
     font-size: 11px;
   }
   
+  .agent-tagline {
+    transform: translateY(0);
+    margin-bottom: 15px;
+    margin-top: 30px;
+  }
+  
+  .agent-tagline p {
+    font-size: 14px;
+  }
+  
+  .mongodb-badge {
+    padding: 6px 12px;
+  }
+  
+  .mongodb-badge span {
+    font-size: 12px;
+  }
+  
   /* Stack options vertically on mobile */
   .options-container {
     flex-direction: column;
     gap: 25px;
     transform: translateY(0);
+    margin-top: 30px;
   }
   
   .option-section {
@@ -508,9 +729,33 @@
     font-size: 24px;
   }
   
+  .hero-features {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  
   .hero-features li {
-    font-size: 12px;
-    padding-left: 16px;
+    font-size: 11px;
+    padding: 4px 10px 4px 18px;
+  }
+  
+  .agent-tagline p {
+    font-size: 13px;
+  }
+  
+  .mongodb-badge {
+    padding: 5px 10px;
+    gap: 8px;
+  }
+  
+  .mongodb-badge span {
+    font-size: 11px;
+  }
+  
+  .mongodb-logo {
+    width: 20px;
+    height: 20px;
   }
   
   .wave-circle {

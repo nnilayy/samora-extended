@@ -22,6 +22,7 @@ function App() {
   const [waveSpeed, setWaveSpeed] = useState(0.01);
   
   const [showQRModal, setShowQRModal] = useState(false);
+  const [showMongoInfo, setShowMongoInfo] = useState(false);
   
   const clientRef = useRef(null);
   const audioRef = useRef(null);
@@ -404,10 +405,36 @@ function App() {
           <span className="hero-highlight">Meet Samora-Extended</span>
         </h1>
         <ul className="hero-features">
-          <li>Hold, Pause and Return</li>
-          <li>Better Call Ending</li>
+          <li>Put on Hold and Return Back</li>
+          <li>Improved Call Ending</li>
           <li>Improved Multilingual Support</li>
+          <li>Improved Interruptions and Turn Detection</li>
         </ul>
+      </div>
+      
+      {/* Tagline */}
+      <div className="agent-tagline">
+        <p>AI Voice Agent for Hotel Grand Vista</p>
+        <div className="mongodb-badge">
+          <img 
+            src="https://www.mongodb.com/assets/images/global/favicon.ico" 
+            alt="MongoDB" 
+            className="mongodb-logo"
+          />
+          <span>Samora is Connected to MongoDB</span>
+          <div className="ping-dot-container">
+            <div className="ping-ring"></div>
+            <div className="ping-ring ping-ring-2"></div>
+            <div className="ping-dot"></div>
+          </div>
+          <button 
+            className="info-icon" 
+            onClick={() => setShowMongoInfo(true)}
+            aria-label="More info"
+          >
+            i
+          </button>
+        </div>
       </div>
       
       <div className="options-container">
@@ -501,6 +528,38 @@ function App() {
             </div>
             <p className="phone-number">{PHONE_DISPLAY}</p>
             <p className="qr-hint">Scan with your phone camera to call Samora</p>
+          </div>
+        </div>
+      )}
+
+      {/* MongoDB Info Modal */}
+      {showMongoInfo && (
+        <div className="qr-modal-overlay" onClick={() => setShowMongoInfo(false)}>
+          <div className="mongo-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="qr-close" onClick={() => setShowMongoInfo(false)}>
+              ×
+            </button>
+            <div className="mongo-header">
+              <img 
+                src="https://www.mongodb.com/assets/images/global/favicon.ico" 
+                alt="MongoDB" 
+                className="mongo-modal-logo"
+              />
+              <span className="mongo-title">MongoDB</span>
+            </div>
+            <h3 className="mongo-status">Samora is Connected</h3>
+            <p className="mongo-db-name">Database: Hotel Grand Vista</p>
+            <div className="mongo-info-content">
+              <p className="mongo-subtitle">You can ask Samora to:</p>
+              <ul className="mongo-list">
+                <li>Book rooms and check availability</li>
+                <li>Look up or cancel bookings</li>
+                <li>Update reservations</li>
+                <li>Check pricing and amenities</li>
+                <li>Add special requests</li>
+              </ul>
+            </div>
+            <p className="mongo-realtime">All changes are updated in the database in real-time!</p>
           </div>
         </div>
       )}
