@@ -251,14 +251,14 @@
 .mongo-status {
   color: #00ED64;
   font-size: 18px;
-  margin: 0 0 5px 0;
+  margin: 0 0 5px;
 }
 
 .mongo-db-name {
   color: #00684A;
   font-size: 14px;
   font-weight: 600;
-  margin: 0 0 20px 0;
+  margin: 0 0 20px;
   padding: 8px 16px;
   background: rgba(0, 237, 100, 0.1);
   border-radius: 20px;
@@ -277,7 +277,7 @@
   color: #00684A;
   font-weight: 600;
   font-size: 14px;
-  margin: 0 0 10px 0;
+  margin: 0 0 10px;
 }
 
 .mongo-list {
@@ -534,7 +534,7 @@
 }
 
 .qr-modal h3 {
-  margin: 0 0 25px 0;
+  margin: 0 0 25px;
   color: #F22F46;
   font-size: 24px;
   font-weight: 600;
@@ -549,7 +549,7 @@
 }
 
 .phone-number {
-  margin: 20px 0 10px 0;
+  margin: 20px 0 10px;
   font-size: 20px;
   font-weight: 600;
   color: #F22F46;
