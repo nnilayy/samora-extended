@@ -53,6 +53,9 @@ logs/
 .coverage
 htmlcov/
 
+# Linting
+.ruff_cache/
+
 local-requirements.txt
 new_venv
 pwr_venv
