@@ -4,11 +4,39 @@
   <img src="assets/hero.png" alt="Samora Extended Banner" />
 </p>
 
+<p align="center">
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-FFFFFF?logo=python" alt="Python" /></a>
+  <a href="https://react.dev/"><img src="https://img.shields.io/badge/ReactJS-FFFFFF?logo=react&logoColor=1142d6" alt="ReactJS" /></a>
+  <a href="https://www.mongodb.com/"><img src="https://img.shields.io/badge/Mongodb-FFFFFF?logo=mongodb" alt="MongoDB" /></a>
+  <a href="https://pipecat.ai/"><img src="https://img.shields.io/badge/Pipecat-white?logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiB3aWR0aD0iMjAwLjAwMDAwMHB0IiBoZWlnaHQ9IjIwMC4wMDAwMDBwdCIgdmlld0JveD0iMCAwIDIwMC4wMDAwMDAgMjAwLjAwMDAwMCIKIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIG1lZXQiPgoKPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsMjAwLjAwMDAwMCkgc2NhbGUoMC4xMDAwMDAsLTAuMTAwMDAwKSIKZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSJub25lIj4KPHBhdGggZD0iTTQ1MCAxNDEwIGMtMTkgLTE5IC0yMCAtMzMgLTIwIC0yNjUgbDAgLTI0NSAtODUgMCAtODUgMCAwIC01NSAwCi01NSAxNDAgMCAxNDAgMCAwIDIxOCAxIDIxNyA2NCAtNzAgNjMgLTcwIDMzMiAwIDMzMSAwIDY0IDcwIDY0IDcwIDEgLTIxNyAwCi0yMTggMTQxIDAgMTQwIDAgLTMgNTMgLTMgNTIgLTgyIDMgLTgzIDMgMCAyNDQgYzAgMjMyIC0xIDI0NiAtMjAgMjY1IC0zOCAzOAotNTEgMjkgLTE3MCAtMTA5IGwtOTUgLTExMCAtMjg1IDAgLTI4NSAwIC02NyA3NyBjLTE1MyAxNzYgLTE2MCAxODAgLTE5OCAxNDJ6Ii8+CjxwYXRoIGQ9Ik03MjUgOTE4IGMtMjcgLTE1IC0zNSAtMjggLTM1IC02MCAwIC02MSA3OCAtOTEgMTIwIC00NiAyNyAyOSAyNSA2NAotNSA5MyAtMjYgMjcgLTQ5IDMxIC04MCAxM3oiLz4KPHBhdGggZD0iTTEyMDUgOTE4IGMtMjcgLTE1IC0zNSAtMjggLTM1IC02MCAwIC02MSA3OCAtOTEgMTIwIC00NiAyNyAyOSAyNQo2NCAtNSA5MyAtMjYgMjcgLTQ5IDMxIC04MCAxM3oiLz4KPHBhdGggZD0iTTI2MCA2MjUgbDAgLTU2IDEzOCAzIDEzNyAzIDMgNTMgMyA1MiAtMTQwIDAgLTE0MSAwIDAgLTU1eiIvPgo8cGF0aCBkPSJNMTQ2MCA2MjUgbDAgLTU2IDEzOCAzIDEzNyAzIDMgNTMgMyA1MiAtMTQwIDAgLTE0MSAwIDAgLTU1eiIvPgo8L2c+Cjwvc3ZnPgo=" alt="Pipecat" /></a>
+</p>
+
+<p align="center">
+  <a href="#"><img src="https://img.shields.io/badge/cerebras-white?logo=data:image/svg+xml;base64,PHN2ZyBmaWxsPSJjdXJyZW50Q29sb3IiIGhlaWdodD0iMWVtIiBzdHlsZT0iZmxleDpub25lO2xpbmUtaGVpZ2h0OjEiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjFlbSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+Q2VyZWJyYXM8L3RpdGxlPjxwYXRoIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE0LjEyMSAyLjcwMWE5LjI5OSA5LjI5OSAwIDAwMCAxOC41OThWMjIuN2MtNS45MSAwLTEwLjctNC43OTEtMTAuNy0xMC43MDFTOC4yMSAxLjI5OSAxNC4xMiAxLjI5OVYyLjd6bTQuNzUyIDMuNjc3QTcuMzUzIDcuMzUzIDAgMTA5LjQyIDE3LjY0M2wtLjkwMSAxLjA3NGE4Ljc1NCA4Ljc1NCAwIDAxLTEuMDgtMTIuMzM0IDguNzU1IDguNzU1IDAgMDExMi4zMzUtMS4wOGwtLjkwMSAxLjA3NXptLTIuMjU1Ljg0NGE1LjQwNyA1LjQwNyAwIDAwLTUuMDQ4IDkuNTYzbC0uNjU2IDEuMjRhNi44MSA2LjgxIDAgMDE2LjM1OC0xMi4wNDNsLS42NTQgMS4yNHpNMTQuMTIgOC41MzlhMy40NiAzLjQ2IDAgMTAwIDYuOTIydjEuNDAyYTQuODYzIDQuODYzIDAgMDEwLTkuNzI2djEuNDAyeiIgZmlsbD0iI0YxNUEyOSIgZmlsbC1ydWxlPSJldmVub2RkIj48L3BhdGg+PHBhdGggZD0iTTE1LjQwNyAxMC44MzZhMi4yNCAyLjI0IDAgMDAtLjUxLS40MDkgMS4wODQgMS4wODQgMCAwMC0uNTQ0LS4xNTJjLS4yNTUgMC0uNDgzLjA0Ny0uNjg0LjE0YTEuNTggMS41OCAwIDAwLS44NC45MTJjLS4wNzQuMjAzLS4xMS40MTYtLjExLjYzMSAwIC4yMTguMDM2LjQzLjExLjYzMWExLjU5NCAxLjU5NCAwIDAwLjg0LjkxM2MuMi4wOTMuNDMuMTQuNjg0LjE0LjIxNiAwIC40MTctLjA0Ni42MDItLjEzNS4xODgtLjA5LjM1LS4yMjUuNDc1LS4zOTJsLjkyOCAxLjAwNmMtLjE0LjE0LS4zLjI2MS0uNDgyLjM2M2EzLjM2NyAzLjM2NyAwIDAxLTEuMDgzLjM4Yy0uMTcuMDI2LS4zMTcuMDQtLjQ0LjA0YTMuMzE1IDMuMzE1IDAgMDEtMS4xODItLjIxIDIuODI1IDIuODI1IDAgMDEtLjk2MS0uNTk3IDIuODE2IDIuODE2IDAgMDEtLjY0NC0uOTI5IDIuOTg3IDIuOTg3IDAgMDEtLjIzOC0xLjIxYzAtLjQ0NC4wOC0uODQ3LjIzOC0xLjIxLjE1LS4zNS4zNjgtLjY2Ni42NDMtLjkyOS4yNzgtLjI2MS42MDUtLjQ2NC45NjItLjU5NmEzLjMxNSAzLjMxNSAwIDAxMS4xODItLjIxYy4zNTUgMCAuNzEyLjA2OCAxLjA3Mi4yMDQuMzYxLjEzOC42ODUuMzYuOTQ0LjY0OWwtLjk2Mi45N3oiPjwvcGF0aD48L3N2Zz4=" alt="Cerebras" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/groq-white?logo=data:image/svg+xml;base64,PHN2ZyBmaWxsPSJjdXJyZW50Q29sb3IiIGZpbGwtcnVsZT0iZXZlbm9kZCIgaGVpZ2h0PSIxZW0iIHN0eWxlPSJmbGV4Om5vbmU7bGluZS1oZWlnaHQ6MSIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMWVtIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZT5Hcm9xPC90aXRsZT48cGF0aCBkPSJNMTIuMDM2IDJjLTMuODUzLS4wMzUtNyAzLTcuMDM2IDYuNzgxLS4wMzUgMy43ODIgMy4wNTUgNi44NzIgNi45MDggNi45MDdoMi40MnYtMi41NjZoLTIuMjkyYy0yLjQwNy4wMjgtNC4zOC0xLjg2Ni00LjQwOC00LjIzLS4wMjktMi4zNjIgMS45MDEtNC4yOTggNC4zMDgtNC4zMjZoLjFjMi40MDcgMCA0LjM1OCAxLjkxNSA0LjM2NSA0LjI3OHY2LjMwNWMwIDIuMzQyLTEuOTQ0IDQuMjUtNC4zMjMgNC4yNzlhNC4zNzUgNC4zNzUgMCAwMS0zLjAzMy0xLjI1MmwtMS44NTEgMS44MThBNyA3IDAgMDAxMi4wMjkgMjJoLjA5MmMzLjgwMy0uMDU2IDYuODU4LTMuMDgzIDYuODc5LTYuODE2di02LjVDMTguOTA3IDQuOTYzIDE1LjgxNyAyIDEyLjAzNiAyeiI+PC9wYXRoPjwvc3ZnPg==" alt="Groq" /></a>
+  <a href="https://openai.com/"><img src="https://img.shields.io/badge/OpenAI-FFFFFF?logo=openai&logoColor=black" alt="OpenAI" /></a>
+  <a href="https://ai.google.dev/"><img src="https://img.shields.io/badge/Gemini-FFFFFF?logo=google%20gemini&logoColor=black" alt="Gemini" /></a>
+</p>
+
+<p align="center">
+  <a href="https://elevenlabs.io/"><img src="https://img.shields.io/badge/ElevenLabs-FFFFFF?logo=elevenlabs&logoColor=black" alt="ElevenLabs" /></a>
+  <a href="https://deepgram.com/"><img src="https://img.shields.io/badge/Deepgram-FFFFFF?logo=deepgram&logoColor=black" alt="Deepgram" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/Cartesia-white?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgbWVldCIgdmlld0JveD0iNDg4IDAgMTA3MiAxMDcyIj4KCjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLDEwNzIuMDAwMDAwKSBzY2FsZSgwLjEwMDAwMCwtMC4xMDAwMDApIiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9Im5vbmUiPgo8cGF0aCBkPSJNODQ1MiA5ODI4IGwzIC04OTMgODkzIC0zIDg5MiAtMiAwIC04OTAgMCAtODkwIC04OTIgLTIgLTg5MyAtMyAwIC0xNzg1IDAgLTE3ODUgODkzIC0zIDg5MiAtMiAwIC04OTAgMCAtODkwIC04OTIgLTIgLTg5MyAtMyAtMyAtODkzIC0yIC04OTIgODk1IDAgODk1IDAgMCA4OTUgMCA4OTUgODk1IDAgODk1IDAgMCAtODk1IDAgLTg5NSA4OTAgMCA4OTAgMCAwIDg5NSAwIDg5NSA4OTUgMCA4OTUgMCAwIDg5MCAwIDg5MCAtODkyIC0yIC04OTMgLTMgLTMgLTg4NyAtMiAtODg4IC04OTAgMCAtODkwIDAgLTIgODg4IC0zIDg4NyAtODkyIDMgLTg5MyAyIDAgMTc5MCAwIDE3OTAgODkzIDIgODkyIDMgMyA4ODggMiA4ODcgODkwIDAgODkwIDAgMiAtODg3IDMgLTg4OCA4OTMgLTMgODkyIC0yIDAgODkwIDAgODkwIC04OTUgMCAtODk1IDAgMCA4OTUgMCA4OTUgLTg5MCAwIC04OTAgMCAwIC04OTUgMCAtODk1IC04OTUgMCAtODk1IDAgMCA4OTUgMCA4OTUgLTg5NSAwIC04OTUgMCAyIC04OTJ6Ii8+CjxwYXRoIGQ9Ik02NjcwIDgwNDAgbDAgLTg5MCAtODk1IDAgLTg5NSAwIDAgLTE3OTAgMCAtMTc5MCA4OTUgMCA4OTUgMCAwIC04OTAgMCAtODkwIDg5MCAwIDg5MCAwIDAgODkwIDAgODkwIC04OTAgMCAtODkwIDAgMCAxNzkwIDAgMTc5MCA4OTAgMCA4OTAgMCAwIDg5MCAwIDg5MCAtODkwIDAgLTg5MCAwIDAgLTg5MHoiLz4KPC9nPgo8L3N2Zz4=" alt="Cartesia" /></a>
+</p>
+
+<p align="center">
+  <a href="https://www.codefactor.io/repository/github/nnilayy/samora-extended"><img src="https://www.codefactor.io/repository/github/nnilayy/samora-extended/badge" alt="CodeFactor" /></a>
+  <a href="https://samora-extended.nnilayy.com/"><img src="https://img.shields.io/website?url=https://samora-extended.nnilayy.com&up_message=Online&down_message=Down&up_color=309c4d&down_color=9c0c0c&label=website" alt="Website Status" /></a>
+  <a href="https://github.com/nnilayy/samora-extended/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?logo=github" alt="License: MIT" /></a>
+  <a href="https://github.com/nnilayy/samora-extended/stargazers"><img src="https://img.shields.io/github/stars/nnilayy/samora-extended?style=social" alt="GitHub Stars" /></a>
+</p>
+
 ## License
 
 This project is licensed under the **MIT License** - checkout the [LICENSE](LICENSE) for more details.
 
 ## Support & Contact
+
 
 If you have any questions or need further assistance, feel free to reach out:
 
