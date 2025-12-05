@@ -9,6 +9,7 @@
   <a href="https://react.dev/"><img src="https://img.shields.io/badge/ReactJS-FFFFFF?logo=react&logoColor=1142d6" alt="ReactJS" /></a>
   <a href="https://www.mongodb.com/"><img src="https://img.shields.io/badge/Mongodb-FFFFFF?logo=mongodb" alt="MongoDB" /></a>
   <a href="https://pipecat.ai/"><img src="https://img.shields.io/badge/Pipecat-white?logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiB3aWR0aD0iMjAwLjAwMDAwMHB0IiBoZWlnaHQ9IjIwMC4wMDAwMDBwdCIgdmlld0JveD0iMCAwIDIwMC4wMDAwMDAgMjAwLjAwMDAwMCIKIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIG1lZXQiPgoKPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsMjAwLjAwMDAwMCkgc2NhbGUoMC4xMDAwMDAsLTAuMTAwMDAwKSIKZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSJub25lIj4KPHBhdGggZD0iTTQ1MCAxNDEwIGMtMTkgLTE5IC0yMCAtMzMgLTIwIC0yNjUgbDAgLTI0NSAtODUgMCAtODUgMCAwIC01NSAwCi01NSAxNDAgMCAxNDAgMCAwIDIxOCAxIDIxNyA2NCAtNzAgNjMgLTcwIDMzMiAwIDMzMSAwIDY0IDcwIDY0IDcwIDEgLTIxNyAwCi0yMTggMTQxIDAgMTQwIDAgLTMgNTMgLTMgNTIgLTgyIDMgLTgzIDMgMCAyNDQgYzAgMjMyIC0xIDI0NiAtMjAgMjY1IC0zOCAzOAotNTEgMjkgLTE3MCAtMTA5IGwtOTUgLTExMCAtMjg1IDAgLTI4NSAwIC02NyA3NyBjLTE1MyAxNzYgLTE2MCAxODAgLTE5OCAxNDJ6Ii8+CjxwYXRoIGQ9Ik03MjUgOTE4IGMtMjcgLTE1IC0zNSAtMjggLTM1IC02MCAwIC02MSA3OCAtOTEgMTIwIC00NiAyNyAyOSAyNSA2NAotNSA5MyAtMjYgMjcgLTQ5IDMxIC04MCAxM3oiLz4KPHBhdGggZD0iTTEyMDUgOTE4IGMtMjcgLTE1IC0zNSAtMjggLTM1IC02MCAwIC02MSA3OCAtOTEgMTIwIC00NiAyNyAyOSAyNQo2NCAtNSA5MyAtMjYgMjcgLTQ5IDMxIC04MCAxM3oiLz4KPHBhdGggZD0iTTI2MCA2MjUgbDAgLTU2IDEzOCAzIDEzNyAzIDMgNTMgMyA1MiAtMTQwIDAgLTE0MSAwIDAgLTU1eiIvPgo8cGF0aCBkPSJNMTQ2MCA2MjUgbDAgLTU2IDEzOCAzIDEzNyAzIDMgNTMgMyA1MiAtMTQwIDAgLTE0MSAwIDAgLTU1eiIvPgo8L2c+Cjwvc3ZnPgo=" alt="Pipecat" /></a>
+  <a href="https://www.twilio.com/"><img src="https://img.shields.io/badge/Twilio-FFFFFF?logo=twilio" alt="Twilio" /></a>
 </p>
 
 <p align="center">
@@ -30,6 +31,10 @@
   <a href="https://github.com/nnilayy/samora-extended/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?logo=github" alt="License: MIT" /></a>
   <a href="https://github.com/nnilayy/samora-extended/stargazers"><img src="https://img.shields.io/github/stars/nnilayy/samora-extended?style=social" alt="GitHub Stars" /></a>
 </p>
+
+## Overview
+
+## Features
 
 ## License
 
