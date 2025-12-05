@@ -196,6 +196,9 @@ const DEFAULT_CONFIG = {
   llm_provider: 'openai',
   stt_provider: 'deepgram',
   tts_provider: 'cartesia',
+  // Context management
+  context_threshold: 100,
+  context_keep_recent: 20,
   // API keys (empty by default - will use server env vars)
   openai_api_key: '',
   google_api_key: '',
@@ -244,7 +247,9 @@ function Settings({ isOpen, onClose, onConfigChange, onSaveAndApply }) {
   const hasModelChanges = 
     config.llm_provider !== savedConfig.llm_provider ||
     config.stt_provider !== savedConfig.stt_provider ||
-    config.tts_provider !== savedConfig.tts_provider;
+    config.tts_provider !== savedConfig.tts_provider ||
+    config.context_threshold !== savedConfig.context_threshold ||
+    config.context_keep_recent !== savedConfig.context_keep_recent;
 
   const handleChange = (key, value) => {
     const newConfig = { ...config, [key]: value };
@@ -316,6 +321,18 @@ function Settings({ isOpen, onClose, onConfigChange, onSaveAndApply }) {
               <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>
             </svg>
             API Keys
+          </button>
+          <button 
+            className={`settings-tab ${activeTab === 'context' ? 'active' : ''}`}
+            onClick={() => setActiveTab('context')}
+          >
+            <svg className="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+            </svg>
+            Context
           </button>
         </div>
 
@@ -475,6 +492,54 @@ function Settings({ isOpen, onClose, onConfigChange, onSaveAndApply }) {
                   <line x1="12" y1="17" x2="12.01" y2="17"/>
                 </svg>
                 <span>API keys are stored locally in your browser.</span>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'context' && (
+            <div className="settings-section">
+              <h3>Context Management</h3>
+              <p className="settings-description">
+                Configure how the conversation context is managed to prevent token overflow.
+              </p>
+
+              <div className="settings-group">
+                <label className="settings-label">Threshold</label>
+                <p className="settings-input-desc">Number of messages before summarization triggers</p>
+                <input
+                  type="number"
+                  min="10"
+                  max="500"
+                  value={config.context_threshold}
+                  onChange={(e) => handleChange('context_threshold', parseInt(e.target.value) || 100)}
+                  className="settings-number-input"
+                />
+              </div>
+
+              <div className="settings-group">
+                <label className="settings-label">Keep Recent</label>
+                <p className="settings-input-desc">Number of recent messages to preserve after summarization</p>
+                <input
+                  type="number"
+                  min="5"
+                  max="100"
+                  value={config.context_keep_recent}
+                  onChange={(e) => handleChange('context_keep_recent', parseInt(e.target.value) || 20)}
+                  className="settings-number-input"
+                />
+              </div>
+
+              <div className="config-preview">
+                <button 
+                  className={`save-apply-btn ${hasModelChanges ? 'has-changes' : ''}`}
+                  onClick={handleSaveAndApply}
+                  disabled={!hasModelChanges}
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  {hasModelChanges ? 'Save & Apply' : 'No Changes'}
+                </button>
               </div>
             </div>
           )}

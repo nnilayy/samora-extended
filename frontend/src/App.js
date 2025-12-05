@@ -386,6 +386,8 @@ function App() {
           llm_provider: config.llm_provider,
           stt_provider: config.stt_provider,
           tts_provider: config.tts_provider,
+          context_threshold: config.context_threshold,
+          context_keep_recent: config.context_keep_recent,
         };
         
         // Add API keys only if provided (non-empty)
@@ -438,6 +440,8 @@ function App() {
               llm_provider: newConfig.llm_provider,
               stt_provider: newConfig.stt_provider,
               tts_provider: newConfig.tts_provider,
+              context_threshold: newConfig.context_threshold,
+              context_keep_recent: newConfig.context_keep_recent,
             };
             
             if (newConfig.openai_api_key) body.openai_api_key = newConfig.openai_api_key;

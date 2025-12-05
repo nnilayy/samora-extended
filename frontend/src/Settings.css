@@ -827,3 +827,37 @@
     height: 14px;
   }
 }
+
+/* Context Settings */
+.settings-input-desc {
+  font-size: 12px;
+  color: #888;
+  margin: 0 0 8px 0;
+}
+
+.settings-number-input {
+  width: 120px;
+  padding: 12px 16px;
+  font-size: 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background: #fafafa;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.settings-number-input:hover {
+  border-color: #ccc;
+}
+
+.settings-number-input:focus {
+  outline: none;
+  border-color: #F22F46;
+  box-shadow: 0 0 0 3px rgba(242, 47, 70, 0.1);
+  background: #fff;
+}
+
+.settings-number-input::-webkit-inner-spin-button,
+.settings-number-input::-webkit-outer-spin-button {
+  opacity: 1;
+}
