@@ -4,6 +4,7 @@ import { DailyTransport } from '@pipecat-ai/daily-transport';
 import SiriWave from 'siriwave';
 import { QRCodeSVG } from 'qrcode.react';
 import SyncWave from './SyncWave';
+import Settings, { getConfig, VoiceAgentConfigPill } from './Settings';
 import './App.css';
 
 // Twilio phone number for calling the agent (E.164 format)
@@ -23,6 +24,8 @@ function App() {
   
   const [showQRModal, setShowQRModal] = useState(false);
   const [showMongoInfo, setShowMongoInfo] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
+  const [config, setConfig] = useState(getConfig);
   
   const clientRef = useRef(null);
   const audioRef = useRef(null);
@@ -378,14 +381,34 @@ function App() {
       setWaveSpeed(0.015);
 
       try {
+        // Build body with provider selections and optional API keys
+        const body = {
+          llm_provider: config.llm_provider,
+          stt_provider: config.stt_provider,
+          tts_provider: config.tts_provider,
+        };
+        
+        // Add API keys only if provided (non-empty)
+        if (config.openai_api_key) body.openai_api_key = config.openai_api_key;
+        if (config.google_api_key) body.google_api_key = config.google_api_key;
+        if (config.cerebras_api_key) body.cerebras_api_key = config.cerebras_api_key;
+        if (config.groq_api_key) body.groq_api_key = config.groq_api_key;
+        if (config.elevenlabs_api_key) body.elevenlabs_api_key = config.elevenlabs_api_key;
+        if (config.deepgram_api_key) body.deepgram_api_key = config.deepgram_api_key;
+        if (config.cartesia_api_key) body.cartesia_api_key = config.cartesia_api_key;
+
+        // Wrap in requestData with body field for Pipecat Cloud API
+        const requestData = {
+          createDailyRoom: true,
+          body,
+        };
+
         await clientRef.current.startBotAndConnect({
           endpoint: PIPECAT_API_URL,
           headers: new Headers({
             'Authorization': `Bearer ${PUBLIC_API_KEY}`,
           }),
-          requestData: {
-            createDailyRoom: true,
-          },
+          requestData,
           timeout: 30000,
         });
       } catch (err) {
@@ -393,11 +416,84 @@ function App() {
         setStatus('idle');
       }
     }
+  }, [status, config]);
+
+  // Handle Save & Apply from Settings - reconnects with new config
+  const handleSaveAndApply = useCallback(async (newConfig) => {
+    setConfig(newConfig);
+    
+    // If currently connected, disconnect and reconnect with new config
+    if (clientRef.current && status === 'active') {
+      await clientRef.current.disconnect();
+      // Small delay to ensure clean disconnect
+      setTimeout(async () => {
+        if (clientRef.current) {
+          setStatus('connecting');
+          setWaveAmplitude(0.7);
+          setWaveSpeed(0.015);
+          
+          try {
+            // Build body with provider selections and optional API keys
+            const body = {
+              llm_provider: newConfig.llm_provider,
+              stt_provider: newConfig.stt_provider,
+              tts_provider: newConfig.tts_provider,
+            };
+            
+            if (newConfig.openai_api_key) body.openai_api_key = newConfig.openai_api_key;
+            if (newConfig.google_api_key) body.google_api_key = newConfig.google_api_key;
+            if (newConfig.cerebras_api_key) body.cerebras_api_key = newConfig.cerebras_api_key;
+            if (newConfig.groq_api_key) body.groq_api_key = newConfig.groq_api_key;
+            if (newConfig.elevenlabs_api_key) body.elevenlabs_api_key = newConfig.elevenlabs_api_key;
+            if (newConfig.deepgram_api_key) body.deepgram_api_key = newConfig.deepgram_api_key;
+            if (newConfig.cartesia_api_key) body.cartesia_api_key = newConfig.cartesia_api_key;
+
+            // Wrap in requestData with body field for Pipecat Cloud API
+            const requestData = {
+              createDailyRoom: true,
+              body,
+            };
+
+            await clientRef.current.startBotAndConnect({
+              endpoint: PIPECAT_API_URL,
+              headers: new Headers({
+                'Authorization': `Bearer ${PUBLIC_API_KEY}`,
+              }),
+              requestData,
+              timeout: 30000,
+            });
+          } catch (err) {
+            console.error('Failed to reconnect:', err);
+            setStatus('idle');
+          }
+        }
+      }, 500);
+    }
   }, [status]);
 
   return (
     <div className="App">
       <audio ref={audioRef} autoPlay playsInline />
+      
+      {/* Settings Icon */}
+      <button 
+        className="settings-icon-btn" 
+        onClick={() => setShowSettings(true)}
+        aria-label="Settings"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+      </button>
+      
+      {/* Settings Modal */}
+      <Settings 
+        isOpen={showSettings} 
+        onClose={() => setShowSettings(false)}
+        onConfigChange={setConfig}
+        onSaveAndApply={handleSaveAndApply}
+      />
       
       {/* Hero Header */}
       <div className="hero-header">
@@ -498,6 +594,12 @@ function App() {
           <p className="hint">Scan QR to call</p>
         </div>
       </div>
+
+      {/* Voice Agent Config Pill */}
+      <VoiceAgentConfigPill 
+        config={config} 
+        onModifyClick={() => setShowSettings(true)} 
+      />
 
       {/* QR Code Modal */}
       {showQRModal && (

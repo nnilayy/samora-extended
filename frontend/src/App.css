@@ -54,7 +54,7 @@
   margin-bottom: 40px;
   position: relative;
   z-index: 2;
-  transform: translateY(-80px);
+  transform: translateY(-40px);
 }
 
 .hero-title {

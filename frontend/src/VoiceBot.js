@@ -25,25 +25,24 @@ function VoiceBot({ onDisconnect }) {
 
   useRTVIClientEvent('userTranscript', (data) => {
     if (data.final) {
-      setTranscript(prev => prev + '\n👤 You: ' + data.text);
+      setTranscript(prev => prev + '\nYou: ' + data.text);
     }
   });
 
   useRTVIClientEvent('botTranscript', (data) => {
-    setTranscript(prev => prev + '\n🤖 Samora: ' + data.text);
+    setTranscript(prev => prev + '\nSamora: ' + data.text);
   });
 
   return (
     <div className="voice-bot">
       <div className="status-indicator">
-        {isListening && <div className="status listening">🎤 Listening...</div>}
-        {isSpeaking && <div className="status speaking">🔊 Samora is speaking...</div>}
-        {!isListening && !isSpeaking && <div className="status idle">💬 Ready to chat</div>}
+        {isListening && <div className="status listening">Listening...</div>}
+        {isSpeaking && <div className="status speaking">Samora is speaking...</div>}
+        {!isListening && !isSpeaking && <div className="status idle">Ready to chat</div>}
       </div>
 
       <div className="audio-visualizer">
         <div className={`pulse-circle ${isListening ? 'listening' : ''} ${isSpeaking ? 'speaking' : ''}`}>
-          🎙️
         </div>
       </div>
 
@@ -53,7 +52,7 @@ function VoiceBot({ onDisconnect }) {
       </div>
 
       <button className="disconnect-btn" onClick={onDisconnect}>
-        ❌ End Conversation
+        End Conversation
       </button>
     </div>
   );
