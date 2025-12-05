@@ -1,12 +1,10 @@
 FROM dailyco/pipecat-base:latest-py3.11
 
+WORKDIR /app
+
 # Copy requirements and install dependencies
 COPY requirements.txt .
 RUN pip install -r requirements.txt
-RUN pip install "pipecat-ai[daily]"
 
-# Copy the backend code (bot.py last to bust cache on code changes)
-COPY backend/prompts/ ./prompts/
-COPY backend/db_functions/ ./db_functions/
-COPY backend/db.py .
-COPY backend/bot.py .
+# Copy the backend code
+COPY backend/ ./
