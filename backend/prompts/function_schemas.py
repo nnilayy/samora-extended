@@ -4,7 +4,18 @@
 
 from pipecat.adapters.schemas.function_schema import FunctionSchema
 
-from .function_descriptions import HOLD_FUNCTION_DESCRIPTION, END_CALL_FUNCTION_DESCRIPTION
+from .function_descriptions import (
+    HOLD_FUNCTION_DESCRIPTION,
+    END_CALL_FUNCTION_DESCRIPTION,
+    GET_PRICING_DESCRIPTION,
+    GET_AMENITIES_DESCRIPTION,
+    LOOKUP_BOOKING_DESCRIPTION,
+    ADD_SPECIAL_REQUEST_DESCRIPTION,
+    CANCEL_BOOKING_DESCRIPTION,
+    CHECK_AVAILABILITY_DESCRIPTION,
+    BOOK_ROOM_DESCRIPTION,
+    UPDATE_BOOKING_DESCRIPTION,
+)
 
 
 # ============ CONTROL FUNCTIONS ============
@@ -28,7 +39,7 @@ end_call_function = FunctionSchema(
 
 get_pricing_function = FunctionSchema(
     name="get_pricing",
-    description="Get room pricing. Call without room_type to get all prices, or specify a type for specific pricing.",
+    description=GET_PRICING_DESCRIPTION,
     properties={
         "room_type": {
             "type": "string",
@@ -41,7 +52,7 @@ get_pricing_function = FunctionSchema(
 
 get_amenities_function = FunctionSchema(
     name="get_amenities",
-    description="Get the list of amenities for a specific room type.",
+    description=GET_AMENITIES_DESCRIPTION,
     properties={
         "room_type": {
             "type": "string",
@@ -54,7 +65,7 @@ get_amenities_function = FunctionSchema(
 
 lookup_booking_function = FunctionSchema(
     name="lookup_booking",
-    description="Look up an existing reservation. Use this when a guest wants to: confirm their booking details, check their reservation status, know more about their upcoming stay, verify room type or dates, or just casually look up their booking. Ask the guest for their confirmation number, name, email, or phone number to find their booking.",
+    description=LOOKUP_BOOKING_DESCRIPTION,
     properties={
         "confirmation_number": {
             "type": "string",
@@ -78,7 +89,7 @@ lookup_booking_function = FunctionSchema(
 
 add_special_request_function = FunctionSchema(
     name="add_special_request",
-    description="Add a special request to an existing booking. Use this when a guest wants to add requests like late check-in, early check-in, extra pillows, extra towels, baby crib, anniversary setup, champagne, dietary requirements, or any other special accommodation. First look up their booking, then add the request.",
+    description=ADD_SPECIAL_REQUEST_DESCRIPTION,
     properties={
         "confirmation_number": {
             "type": "string",
@@ -102,7 +113,7 @@ add_special_request_function = FunctionSchema(
 
 cancel_booking_function = FunctionSchema(
     name="cancel_booking",
-    description="Cancel an existing reservation. Use this when a guest wants to cancel their booking. Confirm with the guest before cancelling. Requires confirmation number, name, or email to find the booking.",
+    description=CANCEL_BOOKING_DESCRIPTION,
     properties={
         "confirmation_number": {
             "type": "string",
@@ -122,7 +133,7 @@ cancel_booking_function = FunctionSchema(
 
 check_availability_function = FunctionSchema(
     name="check_availability",
-    description="Check room availability for specific dates. Use this when a guest wants to know if rooms are available, before making a booking. Returns available room types with pricing.",
+    description=CHECK_AVAILABILITY_DESCRIPTION,
     properties={
         "check_in_date": {
             "type": "string",
@@ -147,7 +158,7 @@ check_availability_function = FunctionSchema(
 
 book_room_function = FunctionSchema(
     name="book_room",
-    description="Create a new room reservation. Use this ONLY after confirming all details with the guest: name, phone, email, room type, dates, and number of guests. Do NOT call this until you have collected all required information.",
+    description=BOOK_ROOM_DESCRIPTION,
     properties={
         "guest_name": {
             "type": "string",
@@ -189,7 +200,7 @@ book_room_function = FunctionSchema(
 
 update_booking_function = FunctionSchema(
     name="update_booking",
-    description="Modify an existing reservation. Can update check-in date, check-out date, room type, or number of guests. First look up the booking, then ask what they want to change.",
+    description=UPDATE_BOOKING_DESCRIPTION,
     properties={
         "confirmation_number": {
             "type": "string",

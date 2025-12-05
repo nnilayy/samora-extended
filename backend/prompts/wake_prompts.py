@@ -5,6 +5,7 @@ WAKE_PROMPTS = [
     "hey samora",
     "hi samora",
     "okay samora",
+    "hello are you there",
     "are you there",
     "you there",
     "i'm back",
