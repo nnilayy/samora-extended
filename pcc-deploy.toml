@@ -12,4 +12,4 @@ agent_profile = "agent-1x"
 # Auto-scaling
 [scaling]
 min_agents = 1
-max_agents = 2
+max_agents = 5
