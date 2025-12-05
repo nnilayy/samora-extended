@@ -56,3 +56,4 @@ htmlcov/
 local-requirements.txt
 new_venv
 pwr_venv
+backend/prompts/s_system_prompt.py
