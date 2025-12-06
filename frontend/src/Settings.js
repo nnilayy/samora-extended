@@ -6,7 +6,7 @@ const LLM_PROVIDERS = [
   { value: 'google', label: 'Google Gemini 2.5 Flash', logo: 'https://img.logo.dev/google.com?token=pk_buX28YqpQXOAIi11qHiUog' },
   { value: 'openai', label: 'OpenAI GPT-4o-mini', logo: 'https://img.logo.dev/openai.com?token=pk_buX28YqpQXOAIi11qHiUog' },
   { value: 'cerebras', label: 'Cerebras Llama-4-Scout', logo: 'https://img.logo.dev/cerebras.ai?token=pk_buX28YqpQXOAIi11qHiUog' },
-  { value: 'groq', label: 'Groq Llama-3.3-70B', logo: 'https://img.logo.dev/groq.com?token=pk_buX28YqpQXOAIi11qHiUog' },
+  { value: 'groq', label: 'Groq Llama-3.3-70B', logo: 'https://img.logo.dev/groq.com?token=pk_buX28YqpQXOAIi11qHiUog', warning: '⚠️ Requires paid tier (free tier has 8k token limit)' },
 ];
 
 const STT_PROVIDERS = [
@@ -174,8 +174,15 @@ function CustomDropdown({ options, value, onChange, label }) {
                   setIsOpen(false);
                 }}
               >
-                <img src={option.logo} alt="" className="dropdown-logo" />
-                <span>{option.label}</span>
+                <div className="dropdown-option-content">
+                  <div className="dropdown-option-main">
+                    <img src={option.logo} alt="" className="dropdown-logo" />
+                    <span>{option.label}</span>
+                  </div>
+                  {option.warning && (
+                    <span className="dropdown-option-warning">{option.warning}</span>
+                  )}
+                </div>
                 {option.value === value && (
                   <svg className="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <polyline points="20 6 9 17 4 12"></polyline>
@@ -193,9 +200,9 @@ function CustomDropdown({ options, value, onChange, label }) {
 // Default values
 const DEFAULT_CONFIG = {
   // Model providers
-  llm_provider: 'openai',
+  llm_provider: 'google',
   stt_provider: 'deepgram',
-  tts_provider: 'cartesia',
+  tts_provider: 'deepgram',
   // Context management
   context_threshold: 100,
   context_keep_recent: 20,

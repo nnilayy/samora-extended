@@ -325,6 +325,31 @@
   height: 18px;
   color: #F22F46;
   margin-left: auto;
+  flex-shrink: 0;
+}
+
+.dropdown-option-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.dropdown-option-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropdown-option-warning {
+  font-size: 11px;
+  color: #b45309;
+  background: #fef3c7;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-top: 6px;
+  display: inline-block;
+  width: fit-content;
 }
 
 /* Input */
