@@ -205,7 +205,7 @@ const DEFAULT_CONFIG = {
   // Model providers
   llm_provider: 'google',
   stt_provider: 'deepgram',
-  tts_provider: 'deepgram',
+  tts_provider: 'cartesia',
   // Context management
   context_threshold: 100,
   context_keep_recent: 20,
