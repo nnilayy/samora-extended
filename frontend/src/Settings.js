@@ -15,8 +15,8 @@ const STT_PROVIDERS = [
 ];
 
 const TTS_PROVIDERS = [
-  { value: 'deepgram', label: 'Deepgram Aura-2 Theia', logo: 'https://img.logo.dev/deepgram.com?token=pk_buX28YqpQXOAIi11qHiUog' },
-  { value: 'cartesia', label: 'Cartesia', logo: 'https://img.logo.dev/cartesia.ai?token=pk_buX28YqpQXOAIi11qHiUog' },
+  { value: 'deepgram', label: 'Deepgram Aura-2 Theia', logo: 'https://img.logo.dev/deepgram.com?token=pk_buX28YqpQXOAIi11qHiUog', warning: '⚠️ Multilingual output not supported' },
+  { value: 'cartesia', label: 'Cartesia', logo: 'https://img.logo.dev/cartesia.ai?token=pk_buX28YqpQXOAIi11qHiUog', note: '✓ Multilingual TTS supported' },
 ];
 
 // API Key providers with logos
@@ -181,6 +181,9 @@ function CustomDropdown({ options, value, onChange, label }) {
                   </div>
                   {option.warning && (
                     <span className="dropdown-option-warning">{option.warning}</span>
+                  )}
+                  {option.note && (
+                    <span className="dropdown-option-note">{option.note}</span>
                   )}
                 </div>
                 {option.value === value && (

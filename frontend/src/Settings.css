@@ -352,6 +352,17 @@
   width: fit-content;
 }
 
+.dropdown-option-note {
+  font-size: 11px;
+  color: #15803d;
+  background: #dcfce7;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-top: 6px;
+  display: inline-block;
+  width: fit-content;
+}
+
 /* Input */
 .settings-input {
   width: 100%;
